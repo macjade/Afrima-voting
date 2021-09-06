@@ -25,7 +25,7 @@ class Pythonafrima(unittest.TestCase):
              'Noelle Elliott', 'Elisabeth Livingston', 'Vanessa Evans']
 
     def setUp(self):
-        self.driver = webdriver.Chrome("C:\\Users\\PrayingReconciliatio\\Desktop\\selenium\\chromedriver.exe")
+        self.driver = webdriver.Chrome(DRIVER_URL / "chromedriver.exe")
 
     def test_vote(self):
         driver = self.driver
