@@ -1,0 +1,1 @@
+# Afrima selenium voting bot
