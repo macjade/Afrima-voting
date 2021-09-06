@@ -68,14 +68,10 @@ class Pythonafrima(unittest.TestCase):
                 time.sleep(10)
 
                 driver.get("https://www.mailf5.com/")
-                #driver.find_element_by_id('inbox-id').click()
-                #driver.find_element_by_xpath('//*[@id="inbox-id"]/input').send_keys(str(e_mail))
-                #driver.find_element_by_xpath('//*[@id="inbox-id"]/button[1]').click()
                 driver.implicitly_wait(6)
                 driver.find_element_by_xpath('//*[starts-with(@id, "mr_") and contains(@id, "4")]').click()
                 driver.implicitly_wait(10)
                 driver.find_element_by_partial_link_text('https://afrima.org/6thAfrimavoting/verify-me/').click()
-                #driver.close()
 
                 driver.get("https://afrima.org/6thAfrimavoting/getaccess")
                 driver.find_element_by_name('email').send_keys(str(e_mail)+'@mailf5.com')
@@ -96,12 +92,6 @@ class Pythonafrima(unittest.TestCase):
                 # inspirational music
                 driver.get("https://afrima.org/6thAfrimavoting/home/songwriter-of-the-year-in-africa")
                 driver.find_element_by_xpath('//*[@eid="313"]').click()
-
-                # To hover on account and click on profile
-                #hover_account = driver.find_element_by_xpath('//*[@id="nav"]/li[4]/a')
-                #hover = ActionChains(driver).move_to_element(hover_account)
-                #hover.perform()
-                #driver.find_element_by_xpath('//*[@id="nav"]/li[4]/ul/li[1]/a').click()
 
                 driver.implicitly_wait(20)
                 time.sleep(10)
